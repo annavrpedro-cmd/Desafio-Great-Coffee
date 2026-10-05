@@ -2,7 +2,7 @@
 
 ## Preview ao Vivo
 Acesse o site funcionando diretamente pelo navegador (Desktop e Mobile):
-👉 **[Clique aqui para ver o projeto online](https://annavrpedro-cmd.github.io/Desafio-Great-Coffee/)**
+👉 **[Clique aqui para ver o projeto online](https://annavrpedro-cmd.github.io/Desafio-Great-Coffee/index.html)**
 
 ---
 
