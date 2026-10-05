@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Carrinho - Great Coffee</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="assets/logo-icon.svg" alt="Logo">
+        </div>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="recompensas.html">Recompensa</a></li>
+                <li><a href="cartoes.html">Gift Cards</a></li>
+                <li><a href="lojas.html">Lojas</a></li>
+            </ul>
+        </nav>
+        <a href="menu.html" class="btn-outline btn-desktop">Continuar Comprando</a>
+        <button class="menu-mobile" aria-label="Abrir menu">
+            <img src="assets/menu-hamburguer.svg" alt="Menu">
+        </button>
+
+    </header>
+
+<main>
+        <section class="secao-carrinho">
+            
+            <h1 class="titulo-principal">
+                Meu <br>
+                <span class="texto-verde">&lt;/Carrinho/&gt;</span>
+            </h1>
+            <p class="subtitulo">Revise seus itens antes de compilar o pedido.</p>
+
+            <div class="conteudo-carrinho">
+                
+                <!-- LISTA DE ITENS SIMULADA -->
+                <div class="lista-itens">
+                    
+                    <!-- ITEM 1: CAFÉ -->
+                    <div class="item-carrinho">
+                        <img src="assets/cafe-1.png" alt="Café Expresso">
+                        <div class="info-item">
+                            <h2>Café Expresso</h2>
+                            <p>Quantidade: 1</p>
+                        </div>
+                        <span class="preco-item">R$ 10,00</span>
+                    </div>
+
+                    <!-- ITEM 2: CUPOM (GIFT CARD) -->
+                    <div class="item-carrinho">
+                        <!-- Usando a logo como ícone do cupom na falta de uma imagem específica -->
+                        <img src="assets/cupom.png" alt="Ícone de Cupom">
+                        <div class="info-item">
+                            <h2>Cupom Dev Júnior</h2>
+                            <!-- Link conectando de volta à página de cartões -->
+                            <p>Código Digital - <a href="cartoes.html" style="color: var(--cor-verde); text-decoration: none;">Ver mais cartões</a></p>
+                        </div>
+                        <span class="preco-item">R$ 30,00</span>
+                    </div>
+
+                </div>
+
+                <!-- RESUMO DO PEDIDO -->
+                <div class="resumo-pedido">
+                    <!-- O valor foi somado (10 do café + 30 do cupom) -->
+                    <h3>Total: <span class="texto-verde">R$ 40,00</span></h3>
+                    
+                    <!-- O target="_blank" faz a página abrir em uma nova aba -->
+                    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20finalizar%20meu%20pedido%20de%20R$%2040,00" target="_blank" class="btn-outline">Finalizar</a>
+                </div>
+
+            </div>
+
+        </section>
+        
+    </main>
+
+</body>
+
+</html>

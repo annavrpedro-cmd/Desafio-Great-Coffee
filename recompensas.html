@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>Recompensas - Great Coffee</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="assets/logo-icon.svg" alt="Ícone de um copo de café verde">
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="recompensas.html">Recompensa</a></li>
+                <li><a href="cartoes.html">Gift Cards</a></li>
+                <li><a href="lojas.html">Lojas</a></li>
+            </ul>
+        </nav>
+
+        <a href="menu.html" class="btn-outline btn-desktop">Pegar seu café</a>
+
+        <button class="menu-mobile" aria-label="Abrir menu">
+            <img src="assets/menu-hamburguer.svg" alt="Menu">
+        </button>
+
+    </header>
+
+    <main>
+
+        <section class="secao-recompensas">
+            
+            <h1 class="titulo-principal">
+                Programa de <span class="texto-verde">&lt;/Fidelidade/&gt;</span>
+            </h1>
+            <p class="subtitulo">A cada bug resolvido, um café. A cada 10 cafés, um por nossa conta!</p>
+
+            <!-- Cartão virtual mostrando o progresso do usuário -->
+            <div class="cartao-fidelidade">
+                <h2>Seu Progresso</h2>
+                <p>Faltam <strong>6 cafés</strong> para a sua próxima recompensa grátis.</p>
+                
+                <div class="progresso-icones">
+                    <!-- Cafés já comprados (Classe 'ativo') -->
+                    <span class="icone-cafe ativo">☕</span>
+                    <span class="icone-cafe ativo">☕</span>
+                    <span class="icone-cafe ativo">☕</span>
+                    <span class="icone-cafe ativo">☕</span>
+                    
+                    <!-- Cafés que faltam comprar -->
+                    <span class="icone-cafe">⚪</span>
+                    <span class="icone-cafe">⚪</span>
+                    <span class="icone-cafe">⚪</span>
+                    <span class="icone-cafe">⚪</span>
+                    <span class="icone-cafe">⚪</span>
+                    <span class="icone-cafe">⚪</span>
+                </div>
+                
+                <a href="menu.html" class="btn-outline">Pedir mais um</a>
+            </div>
+
+            <!-- Bloco explicando as regras de forma simples -->
+            <div class="regras-fidelidade">
+                <h3>Como funciona?</h3>
+                <ul>
+                    <li><strong>1.</strong> Compre qualquer bebida do nosso menu.</li>
+                    <li><strong>2.</strong> Ganhe 1 carimbo virtual (☕) por pedido.</li>
+                    <li><strong>3.</strong> Ao completar 10 carimbos, troque por um café grátis!</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
