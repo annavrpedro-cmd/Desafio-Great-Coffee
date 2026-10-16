@@ -35,10 +35,24 @@
         <!-- Botão do cabeçalho (Oculto no Mobile) para o menu -->
         <a href="menu.html" class="btn-outline btn-desktop">Pegar seu café</a>
 
-        <!-- Ícone do Menu Mobile (Oculto no Desktop) -->
-        <button class="menu-mobile" aria-label="Abrir menu">
+        <input type="checkbox" id="controle-menu" class="controle-menu">
+        
+        <label for="controle-menu" class="menu-mobile" aria-label="Abrir menu">
             <img src="assets/menu-hamburguer.svg" alt="Menu">
-        </button>
+        </label>
+
+        <div class="menu-lateral">
+            <label for="controle-menu" class="fechar-menu" aria-label="Fechar menu">&times;</label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="recompensas.html">Recompensa</a></li>
+                    <li><a href="cartoes.html">Gift Cards</a></li>
+                    <li><a href="lojas.html">Lojas</a></li>
+                </ul>
+            </nav>
+        </div>
 
     </header>
 
