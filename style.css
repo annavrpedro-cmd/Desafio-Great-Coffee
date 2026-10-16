@@ -25,7 +25,9 @@ body {
     min-height: 100vh;
 }
 
-/* 2. Cabeçalho e Botões */
+/* ==================================================== */
+/* 2. Cabeçalho e Botões (ONDE O BUG FOI CORRIGIDO)     */
+/* ==================================================== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -33,17 +35,30 @@ body {
     padding: 30px 6vw;
 }
 
-.logo img, .menu-mobile img {
+/* Tamanho apenas para o logótipo */
+.logo img {
     height: 25px;
     width: auto;
 }
 
+/* Tamanho fixo para o ícone do menu (tracinhos) não esticar */
+.menu-mobile img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain; /* Impede a distorção da imagem */
+}
+
+/* Garante que o botão do menu não cresça além do necessário */
 .menu-mobile {
     background: none;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Oculta a navegação e o botão "Pegar seu café" no mobile */
 .nav-desktop, .btn-desktop {
     display: none;
 }
@@ -125,6 +140,7 @@ body {
     font-size: 35px;
     cursor: pointer;
 }
+
 /* ==================================================== */
 
 /* 4. Estrutura Geral das Páginas e Títulos */
@@ -301,7 +317,7 @@ body {
 @media (min-width: 1024px) {
     .header { padding: 40px 10vw; }
     
-    /* ADICIONADO: Esconde também a .menu-lateral e o .controle-menu no Desktop */
+    /* Esconde a estrutura mobile inteira no Desktop */
     .menu-mobile, .conteudo-mobile, .menu-lateral, .controle-menu { display: none; }
     
     .nav-desktop, .btn-desktop { display: block; }
