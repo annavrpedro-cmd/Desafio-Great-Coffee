@@ -25,9 +25,7 @@ body {
     min-height: 100vh;
 }
 
-/* ==================================================== */
-/* 2. Cabeçalho e Botões (ONDE O BUG FOI CORRIGIDO)     */
-/* ==================================================== */
+/* 2. Cabeçalho e Botões   */
 .header {
     display: flex;
     justify-content: space-between;
@@ -84,9 +82,7 @@ body {
     color: var(--cor-fundo);
 }
 
-/* ==================================================== */
 /* 3. LÓGICA DO MENU MOBILE SEM JAVASCRIPT (CHECKBOX)   */
-/* ==================================================== */
 
 /* Esconde o checkbox da tela */
 .controle-menu {
@@ -141,7 +137,6 @@ body {
     cursor: pointer;
 }
 
-/* ==================================================== */
 
 /* 4. Estrutura Geral das Páginas e Títulos */
 .hero, .secao-menu, .secao-lojas, .secao-cartoes, .secao-recompensas, .secao-carrinho {
