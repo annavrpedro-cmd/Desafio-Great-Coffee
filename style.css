@@ -69,7 +69,65 @@ body {
     color: var(--cor-fundo);
 }
 
-/* 3. Estrutura Geral das Páginas e Títulos */
+/* ==================================================== */
+/* 3. LÓGICA DO MENU MOBILE SEM JAVASCRIPT (CHECKBOX)   */
+/* ==================================================== */
+
+/* Esconde o checkbox da tela */
+.controle-menu {
+    display: none;
+}
+
+/* Estrutura inicial do menu lateral escondido à direita */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Totalmente fora da tela */
+    width: 250px;
+    height: 100vh;
+    background-color: var(--cor-card);
+    border-left: 1px solid var(--cor-verde);
+    padding: 60px 30px;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+/* A MÁGICA: Quando o checkbox é checado, puxa o menu lateral */
+.controle-menu:checked ~ .menu-lateral {
+    right: 0; 
+}
+
+/* Estilização interna do menu */
+.menu-lateral nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-lateral nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.menu-lateral nav a:hover {
+    color: var(--cor-verde);
+}
+
+/* Botão de fechar (X) */
+.fechar-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--cor-verde);
+    font-size: 35px;
+    cursor: pointer;
+}
+/* ==================================================== */
+
+/* 4. Estrutura Geral das Páginas e Títulos */
 .hero, .secao-menu, .secao-lojas, .secao-cartoes, .secao-recompensas, .secao-carrinho {
     display: flex;
     flex-direction: column;
@@ -100,7 +158,7 @@ body {
     margin-top: 10px;
 }
 
-/* 4. Estética dos Cartões (Menu, Lojas, Gift Cards) */
+/* 5. Estética dos Cartões (Menu, Lojas, Gift Cards) */
 .grade-produtos, .grade-lojas, .lista-cupons {
     display: flex;
     flex-direction: column;
@@ -139,7 +197,7 @@ body {
     margin: 10px 0;
 }
 
-/* 5. Regras Específicas (Fidelidade e Home) */
+/* 6. Regras Específicas (Fidelidade e Home) */
 .progresso-icones {
     display: flex;
     gap: 15px;
@@ -180,7 +238,7 @@ body {
     100% { transform: translateY(-15px); }
 }
 
-/* 6. Carrinho de Compras */
+/* 7. Carrinho de Compras */
 .conteudo-carrinho {
     display: flex;
     flex-direction: column;
@@ -239,10 +297,13 @@ body {
     margin-bottom: 25px;
 }
 
-/* 7. Adaptação para Desktop (Telas maiores que 1024px) */
+/* 8. Adaptação para Desktop (Telas maiores que 1024px) */
 @media (min-width: 1024px) {
     .header { padding: 40px 10vw; }
-    .menu-mobile, .conteudo-mobile { display: none; }
+    
+    /* ADICIONADO: Esconde também a .menu-lateral e o .controle-menu no Desktop */
+    .menu-mobile, .conteudo-mobile, .menu-lateral, .controle-menu { display: none; }
+    
     .nav-desktop, .btn-desktop { display: block; }
     
     .nav-desktop ul { display: flex; list-style: none; gap: 40px; }
